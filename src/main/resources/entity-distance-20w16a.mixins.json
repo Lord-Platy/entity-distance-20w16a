@@ -1,0 +1,21 @@
+{
+	"required": true,
+	"package": "s16.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"ThreadedAnvilChunkStorageAccessor",
+		"EntityTrackerMixin",
+		"MinecraftServerMixin",
+		"IntegratedServerMixin",
+		"WorldRendererMixin",
+		"GameOptionsMixin",
+		"GameOptionsAccessor",
+		"VideoOptionsScreenMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

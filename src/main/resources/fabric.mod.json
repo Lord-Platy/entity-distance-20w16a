@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "entity-distance-20w16a",
+	"version": "${version}",
+	"name": "entity-distance-20w16a",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/entity-distance-20w16a/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"s16.entitydistance20w16a"
+		]
+	},
+	"mixins": [
+		"entity-distance-20w16a.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">1.15.2",
+		"java": ">=8"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
