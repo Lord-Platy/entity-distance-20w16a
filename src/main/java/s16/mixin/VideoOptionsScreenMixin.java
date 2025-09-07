@@ -4,9 +4,7 @@ import net.minecraft.client.gui.Element;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.VideoOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonListWidget;
-import net.minecraft.client.options.GameOptions;
 import net.minecraft.text.Text;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,13 +13,12 @@ import s16.ModOptions;
 
 @Mixin(VideoOptionsScreen.class)
 public abstract class VideoOptionsScreenMixin extends Screen {
-    @Final private GameOptions settings;
 
     protected VideoOptionsScreenMixin(Text title) {
         super(title);
     }
     @Inject(method = "init", at = @At("TAIL"))
-    private void addSlider(CallbackInfo ci) {
+    private void addCustomSlider(CallbackInfo ci) {
         for (Element child : this.children()) {
             if (child instanceof ButtonListWidget) {
                 ButtonListWidget list = (ButtonListWidget) child;

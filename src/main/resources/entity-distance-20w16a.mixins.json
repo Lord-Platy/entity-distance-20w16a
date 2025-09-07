@@ -3,6 +3,11 @@
 	"package": "s16.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
+		"PiglinBrainMixin",
+		"BlockMixin",
+		"PiglinBrainInvoker",
+		"AccessibilityScreenAccessor",
+		"AccessibilityScreenMixin",
 		"ThreadedAnvilChunkStorageAccessor",
 		"EntityTrackerMixin",
 		"MinecraftServerMixin",
